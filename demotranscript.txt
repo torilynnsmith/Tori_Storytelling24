@@ -1,0 +1,25 @@
+Start of a transcript of:
+
+Environmental Mystery Demo
+An Interactive Fiction by Tori Smith
+Release 1 / Serial number 240923 / Inform 7 v10.1.2 / D
+Inform 7 v10.1.2
+Identification number: //49FF8A87-B10A-40CD-9412-C75FC3BDF5FE//
+Interpreter version 0.6.0 / VM 3.1.3
+
+>l
+Gallery
+The Louvre art gallery in Paris, France. It's dark and closed for the day. There is a chair here facing a painting on the wall and a statue on a pedestal. An old, antique trunk is here as well.
+
+A door to what looks like the bathroom is to the east, while a door that says "Security Office" is to the west.
+
+>w
+You haven't looked around enough yet.
+
+>east
+Oh, you don't have your bathroom book yet.
+
+>end
+That's not a verb I recognise.
+
+>
