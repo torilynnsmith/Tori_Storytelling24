@@ -56,24 +56,15 @@ Would you like to go to a new knot?
 // * {cheese} [Pepperoni] //we've now seen cheese and can pick pepperoni. these are booleans
 //     -> pepperoni
 Pick a pizza topping.
-* [Nothing] //this will be show first because we haven't seen cheese yet
-    -> nothing
-* [Cheese] //once we've seen nothing, we now have the option to see cheese.
-    -> cheese
-* [Pepperoni] //we've now seen cheese and can pick pepperoni. these are booleans
-    -> pepperoni
-
-== pepperoni ==
-Great! Pepperoni! Sounds yummy. 
--> variables
-
-== cheese ==
-Cheese?! Sounds boring, but ok.
--> variables
-
+* [Nothing] ->nothing
+* (cheese) [Cheese] Cheese. Basic but yummy. 
+* (pepperoni) [Pepperoni] Pepperoni. Spicy, my favorite. 
+- You chose {pepperoni: pepperoni} {not pepperoni: cheese}. I'll try remember that for later. //check for the label name that was chosen! Great for chosing options that can be unlocked by toher options. 
+    -> variables
+    //NOTE: These behave as local variables! to access them from a different knot, which is outside of the local SCOPE, you'll need to reference it with "knot_name.label_name} See conditionals. 
 == nothing ==
-Nothing? Come on, you're hungry! 
--> pizzatoppings
+Nothing? Ok, sicko. Ummm but what if you chose something? //anything inside regular parenthesis is a LABEL. A LABEL is a tag, a reminder that the Ink story's flow has passed through the thread
+    -> pizzatoppings
 
 == variables ==
 ~ temp pizzaAmount = 0 //a temp variable is only accessible within the knot its declared using a tilda
@@ -84,7 +75,7 @@ Who's name is on the order? //alter Global Variable
 * [Terry]
     ~ playerName = "Terry"
 * [Samantha]
-    ~ playerName = "Terry"
+    ~ playerName = "Samantha"
 - Thank you {playerName}. //to print a variable value, wrap it in curly brackets
 
 How many pizza's would you like to order? //alter temp variable
@@ -105,13 +96,22 @@ How many pizza's would you like to order? //alter temp variable
 You can also use conditionals to see if the player has seen a piece of content before.
 
 For example, I can remember which pizza topping you chose... 
-* {pepperoni}[pepperoni]"I chose pepperoni." //the curly brackets check to see if a condition has been met. 
-    I knew you did!
-* {cheese} [cheese]"I chose cheese."
-    Simple yet delicious!
+* [Tell me!] You chose {pizzatoppings.pepperoni: PEPPERONI. } {pizzatoppings.cheese: CHEESE.}
 - I knew your pizza toppings because I checked to see if you'd "seen" a piece of content earlier! 
-    This allows us to keep our code efficient without a bagillion knots to follow paths of content.
-    You can check to see how many times a piece of content has been visited or even format them as booleans. 
+This allows us to keep our code efficient without a bagillion knots to follow paths of content.
+You can check to see how many times a piece of content has been visited or even format them as booleans, if you want to get fancy.
+->conditional_knot
+
+== conditional_knot ==
+You don't need to label every line, but you can! You can also just check to see if a knot as a whole has been visited. For instance, did you choose "nothing" as an option or your pizza? 
+
+* {nothing} [Yeah, I did! How'd you know?] You saw the "nothing" knot! You saw that knot {nothing} time(s). 
+    //as writen here, will print how many times the knot was visited
+* {not nothing} [No, I didn't. Can you tell?] You didn't see the "nothing" knot and picked a pizza topping like a human being and not an alien. 
+    My programmins says your visit to the nothing knot was {not nothing}.
+    //as writen here, will print false, as the knot was not visited.
+- You now have a basic understanding of labels and conditionals!
+
 -> ending
 
 == ending == 
