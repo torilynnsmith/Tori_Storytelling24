@@ -64,8 +64,18 @@ How many pizza's would you like to order?
     ~ pizzaAmount = 10
 - {pizzaAmount}? Got it. 
 
+Have one extra, on the house. 
+~ pizzaAmount += 1 
+You know have {pizzaAmount} pizzas. 
+
 {pizzaAmount <=5: Having a small gathering?}
-{pizzaAmount > 5: Throwing a big party, huh?}
+{pizzaAmount > 5: Throwing a big party, huh? -> lots_of_pizzas}
+// {pizzaAmount <=5: ->memory}
+// {pizzaAmount > 5: ->lots_of_pizzas}
+
+== lots_of_pizzas==
+And you didn't invite me?
+
 -> memory
 
 == memory ==
