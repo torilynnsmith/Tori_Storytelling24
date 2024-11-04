@@ -31,14 +31,17 @@ Let's check the dessert menu. What should I order?
 
 == dessert_menu ==
 The menu reads...
-* cheesecake
+* (cheesecake) cheesecake
     My favorite! Nom Nom. 
-    -> variables
-* tiramisu
-    That's not on the menu. Try again.
-    -> dessert_menu
+* (tiramisu) tiramisu
+    Coffee and cream, delicous.
 + nothing
-    That's no fun. Order something. 
+    -> nothing
+- For dessert, you ordered {cheesecake: cheesecake} {not cheesecake: tiramisu}//{tiramisu: tiramisu}.
+-> variables
+    
+== nothing ==
+That's no fun. Order something. 
     -> dessert_menu
     
 == variables ==
@@ -63,7 +66,15 @@ How many pizza's would you like to order?
 
 {pizzaAmount <=5: Having a small gathering?}
 {pizzaAmount > 5: Throwing a big party, huh?}
+-> memory
 
+== memory ==
+I remember what you ordered for dessert. Would you like to know?
+* [Tell me!] You chose {dessert_menu.cheesecake: cheesecake} {dessert_menu.tiramisu: tiramisu}.
+- I also know if you ordered "nothing". 
+* {nothing} [I DID order nothing!] You ordered nothing {nothing} time(s). 
+* {not nothing} [I never ordered nothing] Correct, your visit to the nothing knot was {nothing}.
+- thanks for ordering. 
 -> end
 
 == end ==
