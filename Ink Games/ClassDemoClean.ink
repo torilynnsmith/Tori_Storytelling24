@@ -1,23 +1,36 @@
+//THESE ARE OTHER KINDS OF TAGS
+# author: Tori Smith 
+    //this is an author tag, shows a "by: INSERT NAME HERE" under the title. 
+# theme: dark 
+    //there are 2 default visual themes: dark/light
+
 INCLUDE dessertmenu.ink
 
 VAR myName = ""
 VAR testBool = true
 CONST myConstant = 6
 
-This text is in the upper, left-hand corner! 
+# IMAGE: images/cat.png
+
+This text is in the upper, left-hand corner! # CLASS: showTop
 * [START] -> start //start the game
 
 == start == //I put start in its own knot so I could divert back to it with a RESTART button
-I desire pizza. What pizza do I want? 
+I desire pizza. What pizza do I want? #CLASS: innerThought
 
  * Pepperoni
+    # IMAGE: images/pepperoni.png
  * Cheese
+     # IMAGE: images/cheese.jpg
  * Pineapple
+     # IMAGE: images/pineapple.jpg
 
 - Yummy. I ate it. 
 *[Order a drink] -> drinks
 
 == drinks ==
+# CLEAR 
+    //this clears everything in the story above this point from view. 
 I'm thirsty too. What should I drink?
 * Sprite
     Bubbly...
@@ -82,6 +95,8 @@ I remember what you ordered for dessert. Would you like to know?
 == end ==
 gooodbye
 * [RESTART] 
+    # RESTART
     -> DONE
+//restart the game (note that you'll be missing some choices if they weren't sticky.
 * [END] Thank you for playing.
     -> END
