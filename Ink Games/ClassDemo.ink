@@ -7,13 +7,6 @@ VAR myName = ""
 VAR testBool = true
 CONST myConstant = 6
 
-<<<<<<< Updated upstream
-This text is in the upper, left-hand corner! 
-* [START] -> start //start the game
-
-== start == //I put start in its own knot so I could divert back to it with a RESTART button
-I desire pizza. What pizza do I want? 
-=======
 This text should be in the upper, left-hand corner! # CLASS : upperCorner
 -> start
 
@@ -21,7 +14,6 @@ This text should be in the upper, left-hand corner! # CLASS : upperCorner
 
 # IMAGE: images/pizzashop.jpg
 I desire pizza. What pizza do I want? # CLASS : innerThought
->>>>>>> Stashed changes
 
  * Pepperoni
     # IMAGE: images/pepperoni.jpg
@@ -31,16 +23,10 @@ I desire pizza. What pizza do I want? # CLASS : innerThought
     # IMAGE: images/pineapple.jpg
 
 - Yummy. I ate it. 
-<<<<<<< Updated upstream
 *[Order a drink] -> drinks
 
 == drinks ==
-=======
-* [Order A Drink]-> drinks
-
-== drinks ==
 # CLEAR
->>>>>>> Stashed changes
 I'm thirsty too. What should I drink?
 * Sprite
     Bubbly...
@@ -103,15 +89,8 @@ I remember what you ordered for dessert. Would you like to know?
 -> end
 
 == end ==
-<<<<<<< Updated upstream
-gooodbye
-* [RESTART] 
-    -> DONE
-* [END] Thank you for playing.
-=======
 * [play again?] 
 # RESTART 
 -> DONE
 * gooodbye
->>>>>>> Stashed changes
     -> END
