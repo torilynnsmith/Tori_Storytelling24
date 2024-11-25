@@ -1,18 +1,29 @@
-
 # author: Tori Smith
-# theme: dark 
 INCLUDE dessertmenu.ink
 
 VAR myName = ""
 VAR testBool = true
 CONST myConstant = 6
+VAR theme = ""
 
-This text should be in the upper, left-hand corner! # CLASS : upperCorner
+This text should be in the upper, left-hand corner! # CLASS : imageContainer
+-> themechange
+
+== themechange ==
+//This is probably more complicated than it's worth, you'd have to do some Javascript finagling. 
+
+//Choose your theme:
+// * Dark
+//     ~ theme = "dark"
+// * KPOP
+//     ~ theme = "kpop"
+    
+// - You have selected the {theme} theme.
+
 -> start
+== start ==
 
-== start
-
-# IMAGE: images/pizzashop.jpg
+//# IMAGE: images/pizzashop.jpg
 I desire pizza. What pizza do I want? # CLASS : innerThought
 
  * Pepperoni
