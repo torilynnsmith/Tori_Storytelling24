@@ -5,9 +5,6 @@ body {
     font-weight: lighter;
     overflow: hidden;
     background: white;
-        /* if ($theme == "dark")
-        {black;}
-        else {magenta;} */
 }
 
 @media screen and (prefers-reduced-motion: no-preference) {
@@ -116,6 +113,7 @@ h2 {
     }
 }
 
+/* paragraphs */
 p {
     font-size: 13pt;
     color: #f02020;
@@ -123,6 +121,7 @@ p {
     font-weight: lighter;
 }
 
+/* hyperlinks */
 a {
     font-weight: 700;
     color: #000000;
@@ -137,6 +136,7 @@ a {
     text-decoration: none;
     cursor: not-allowed;
 }
+
 
 a:hover {
     color: black;
@@ -259,7 +259,7 @@ img {
     # theme: dark
 */
 
-/* body.dark {
+body.dark {
     background: black;
     color: white;
 }
@@ -310,62 +310,6 @@ img {
     background: black;
 }
 
-/* This is a custom theme
-  KPOP Theme 
-    # theme: kpop
-*/
-
-/*body.kpop {
-    background: pink;
-    color: black;
-}
-
-.kpop h2 {
-    color: #0066ff;
-}
-
-.kpop .container {
-    background: black;
-}
-
-.kpop .written-in-ink {
-    background: black;
-}
-
-.kpop a {
-    color: darkmagenta;
-}
-.kpop .unclickable{
-    color: #c4af87;
-    cursor:not-allowed;
-}
-
-.kpop a:hover {
-    color: white;
-}
-
-@media screen and (prefers-reduced-motion: no-preference) {
-    .kpop a {
-        transition: color 0.6s;
-    }
-}
-
-.kpop strong {
-    color: white;
-}
-
-.kpop #controls [disabled] {
-    color: #444;
-}
-
-.kpop .end {
-    color: white;
-}
-
-.kpop #controls {
-    background: black;
-} */
-
 /* These are line specific classes */
 .upperCorner
 {
@@ -380,13 +324,19 @@ img {
    font-style: italic;
 }
 
+/* This container contains both text and an image */
 .imageContainer {
-    /* display: block; */
-    position: fixed;
+    position: absolute;
     top: 0px; 
     left: 10px; 
+    border: 3px solid red;
     background-image: url(images/pizzashop.jpg);
-    /* max-width: 600px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 250px; 
+    max-width: 200px;
+    /* object-fit: fill; */
+    /*
     margin: 0 auto;
     padding: 20px;
     padding-top: 4em;

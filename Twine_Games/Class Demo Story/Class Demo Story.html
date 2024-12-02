@@ -9,15 +9,19 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Class Demo Story.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Class Demo Story" startnode="1" creator="Twine" creator-version="2.9.2" format="Harlowe" format-version="3.3.9" ifid="50A098F0-E89B-4B87-BEAA-F924413A241E" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Introduction" tags="" position="575,200" size="100,100">I wake up in the morning. &lt;!--This is a comment--&gt;
+<tw-storydata name="Class Demo Story" startnode="1" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="50A098F0-E89B-4B87-BEAA-F924413A241E" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Introduction" tags="" position="575,200" size="100,100">I wake up in the morning. &lt;!--This is a comment--&gt;
 [[Look at phone]] &lt;!--Brackets make a new passage...or lin to one already created--&gt;
 [[Go back to sleep]]</tw-passagedata><tw-passagedata pid="2" name="Look at phone" tags="" position="575,325" size="100,100">I check my phone.
+
+&lt;img src = &quot;images/cellphone.jpg&quot; width=&quot;400px&quot;&gt;
 
 What app do I check first?
 [[TikTok|App1]]
 [[Tumblr|App2]]
 [[Instagram|App3]]</tw-passagedata><tw-passagedata pid="3" name="Go back to sleep" tags="" position="700,325" size="100,100">Wish I could, but need to get up.
-[[Look at phone]] &lt;!--Link to passage that already exists.--&gt;</tw-passagedata><tw-passagedata pid="4" name="App1" tags="" position="450,450" size="100,100"></tw-passagedata><tw-passagedata pid="5" name="App2" tags="" position="575,450" size="100,100"></tw-passagedata><tw-passagedata pid="6" name="App3" tags="" position="700,450" size="100,100"></tw-passagedata></tw-storydata>
+[[Look at phone]] &lt;!--Link to passage that already exists.--&gt;</tw-passagedata><tw-passagedata pid="4" name="App1" tags="" position="450,450" size="100,100">You check TikTok [[and...|Game Over]]</tw-passagedata><tw-passagedata pid="5" name="App2" tags="" position="575,450" size="100,100">You check Tumblr [[and...|Game Over]]</tw-passagedata><tw-passagedata pid="6" name="App3" tags="" position="700,450" size="100,100">You check Instagram [[and...|Game Over]]</tw-passagedata><tw-passagedata pid="7" name="Game Over" tags="" position="575,600" size="100,100">THE WORLD ENDS.
+
+[[Restart|Introduction]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
