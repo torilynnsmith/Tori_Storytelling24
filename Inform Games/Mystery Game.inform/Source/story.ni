@@ -2,6 +2,9 @@
 
 [[This is a comment]]
 
+When play begins:
+	say "This is the fantastic incredible description of the beginning of the game."
+
 [[THE OFFICE]]
 The Office is a room. The description of the Office is "A really boring, gray office with a small computer desk. A door to the bedroom is to the east. "
 
