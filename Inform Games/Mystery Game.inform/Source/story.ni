@@ -19,3 +19,8 @@ The apple is a thing on the desk in the Office. The description of the apple is 
 
 [[THE BEDROOM]]
 The Bedroom is a room. The Bedroom is east of the Office. The description of the Bedroom is "A cozy bedroom. A door to the office is to the west." 
+
+[[This is a test to determine if dictation works in this program.]] 
+The chair is a thing in the office. The description of the chair is "a rickety chair."
+
+The cup is a thing on the desk in the Office. The description of the cup is "a chipped cup".
