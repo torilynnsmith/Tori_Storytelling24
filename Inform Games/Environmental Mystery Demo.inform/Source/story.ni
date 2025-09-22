@@ -52,7 +52,8 @@ Instead of opening the trunk:
 		now the trunk is open; 
 		now the book is found;
 		now the player carries the book; 
-		now the key is nowhere; [[remove the key from the player]]
+		[[now the key is nowhere;]] [[remove the key from the player]]
+		remove the key from play; [[had to use this version in my Fall 2025 Class instead for some reason, idk why it wasn't working.]]
 		say "Though the key sticks in the lock, the trunk is now open and you find an old book. You take it." instead;
 	if trunk is open and the book is found: [[Trunk has been opened already and the book taken.]]
 		say "There's nothing else in the trunk." instead; 
