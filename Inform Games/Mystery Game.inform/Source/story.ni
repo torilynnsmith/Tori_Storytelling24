@@ -1,4 +1,5 @@
 "Mystery Game" by Tori Smith
+Release along with interpreter. 
 
 [[This is a comment. Anything inside these double brackets is a comment and will not be executed by the program. They're great for leaving notes or temporarily removing code.]]
 
@@ -71,9 +72,7 @@ The Bathroom is a room. The Bathroom is west of the Office. The description of t
 [["Lock" the player out of the bathroom.]]
 Instead of going to the Bathroom: [[Don't let the player go into the bathroom unless they've found the book and are holding the book. This is a "locked door" and key example.]]
 	if the book is found and the player carries the book:
-		continue the action; [[let the player go into the Bathroom]]
+		[[continue the action;]] [[let the player go into the Bathroom]]
+		end the game saying "you go into the bathroom wit your precious reading material. you do you."; 
 	Otherwise:
 		say "You can't go in there yet." instead. [[Stop the action and don't let the player go into the Bathroom. They'll remain in the room they were in (in this case, the Office) ]]
-
-
-[[NEXT TIME! Ending the game]]
