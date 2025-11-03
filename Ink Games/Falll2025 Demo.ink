@@ -2,6 +2,8 @@
 /*You can commment
 multiple lines like this.*/
 
+VAR changeName = "" //this is a global varialbe, it's accessble anywhere in your source code. 
+
 -> pizza //this is a DIVERT, to send the story to a new KNOT
 
 == pizza == //this is a KNOT name, you can DIVERT to them. 
@@ -35,19 +37,26 @@ That's no fun. Order something.
 -> pizza
 
 == variables ==
+~ temp pizzaAmount = 0 //this is a temporary variable. it is only accessble within the Divert it's declared in, no where else in your source code. 
+
 What's the name on the order?
-* Bob
+* Bob 
+    ~ changeName = "Bob"
 * Gertrude
+    ~ changeName = "Gertrude"
 * Carly
-- Thank you INSERT NAME.
+    ~ changeName = "Carly"
+- Thank you {changeName}. //the variable name inside brackets printw the variable's value
 
 How many pizza's would you like to order, INSERT NAME?
 * 5
+    ~ pizzaAmount = 5
 * 10
-- INSERT PIZZA AMOUNT? Got it. 
+    ~ pizzaAmount = 10
+- {pizzaAmount}? Got it. 
 -> endknot
 
 == endknot ==
-Thanks for ordering, your pizza is on its way.
+Thanks for ordering, {changeName}. Your pizza is on its way.
 * Gooodbye.
     -> END //you must have a DONE or END divert to end your story. 
