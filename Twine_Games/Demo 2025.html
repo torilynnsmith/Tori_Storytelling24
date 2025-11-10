@@ -10,16 +10,41 @@
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Demo 2025.</tw-noscript></noscript></tw-story>
 <tw-storydata name="Demo 2025" startnode="1" creator="Twine" creator-version="2.11.0" format="Harlowe" format-version="3.3.9" ifid="25E1B01F-4D94-4DA4-90E4-876AA6FCA82D" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start Game" tags="" position="500,175" size="100,100">This is the first passage in our Twine game. &lt;!--This is a comment. --&gt;
-
+(set:$color to &quot;&quot;)
 What&#39;s your favorite color? 
 [[Red]]
-[[Blue]]</tw-passagedata><tw-passagedata pid="2" name="Red" tags="" position="500,300" size="100,100">Red huh? Nice. What does red remind you of?
+[[Blue]]</tw-passagedata><tw-passagedata pid="2" name="Red" tags="" position="500,300" size="100,100">(set:$color to &quot;red&quot;)
+$color huh? Nice. What does it remind you of?
 
 [[I like fire |Fire]]
-[[I like flowers |Flowers]]</tw-passagedata><tw-passagedata pid="3" name="Blue" tags="" position="700,300" size="100,100">Blue huh? Cool. What does blue remind you of?
+[[I like flowers |Flowers]]</tw-passagedata><tw-passagedata pid="3" name="Blue" tags="" position="700,300" size="100,100">(set:$color to &quot;blue&quot;)
+$color huh? Nice. What does it remind you of?
 
 [[Ocean]]
-[[Sky]]</tw-passagedata><tw-passagedata pid="4" name="Ocean" tags="" position="750,425" size="100,100"></tw-passagedata><tw-passagedata pid="5" name="Sky" tags="" position="875,425" size="100,100"></tw-passagedata><tw-passagedata pid="6" name="Fire" tags="" position="500,425" size="100,100"></tw-passagedata><tw-passagedata pid="7" name="Flowers" tags="" position="625,425" size="100,100"></tw-passagedata></tw-storydata>
+[[Sky]]</tw-passagedata><tw-passagedata pid="4" name="Ocean" tags="" position="750,425" size="100,100">Ocean?
+
+[[Sounds nice.|Order a drink]]</tw-passagedata><tw-passagedata pid="5" name="Sky" tags="" position="875,425" size="100,100">Sky?
+
+[[Sounds nice.|Order a drink]]</tw-passagedata><tw-passagedata pid="6" name="Fire" tags="" position="500,425" size="100,100">Fire?
+
+[[Sounds nice.|Order a drink]]</tw-passagedata><tw-passagedata pid="7" name="Flowers" tags="" position="625,425" size="100,100">Flowers?
+
+[[Sounds nice.|Order a drink]]</tw-passagedata><tw-passagedata pid="8" name="Order a drink" tags="" position="675,625" size="100,100">(set:$likeCoffee to false)
+Do you like coffee?
+
+[[Yes| Likes Coffee]]
+[[No| Hates Coffee]]</tw-passagedata><tw-passagedata pid="9" name=" Likes Coffee" tags="" position="675,750" size="100,100">(set:$likeCoffee to true)
+
+[[Nice, me too!| Coffee Amount]]</tw-passagedata><tw-passagedata pid="10" name=" Hates Coffee" tags="" position="800,750" size="100,100">(set:$likeCoffee to false)
+
+[[Weird, but ok...| Coffee Amount]]</tw-passagedata><tw-passagedata pid="11" name=" Coffee Amount" tags="" position="675,875" size="100,100">(set:$coffeeAmount to 0)
+How much coffee do you want? 
+[[1|1 Coffee]]
+[[100|100 Coffees]]</tw-passagedata><tw-passagedata pid="12" name="1 Coffee" tags="" position="675,1000" size="100,100">(set:$coffeeAmount to 1)That&#39;s a reasonable amount of [[coffee!|Coffee Results]]</tw-passagedata><tw-passagedata pid="13" name="100 Coffees" tags="" position="800,1000" size="100,100">(set:$coffeeAmount to 100)That&#39;s a crazy amount of [[coffee!|Coffee Results]] Are you ok?</tw-passagedata><tw-passagedata pid="14" name="Coffee Results" tags="" position="675,1125" size="100,100">(if:$likeCoffee is true)[You like coffee, you&#39;re the best!]
+&lt;!--(else-if:$likeCoffee is false)[You hate coffee, but you&#39;re still a nice person.]--&gt;
+(else:)[You hate coffee, but you&#39;re still a nice person.]
+
+A nice person who likes the color $color who ordered $coffeeAmount coffee(s). </tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
